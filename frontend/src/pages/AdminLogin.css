@@ -1,0 +1,404 @@
+.adminLoginPage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 15% 15%, rgba(252, 128, 25, 0.16), transparent 42%),
+    radial-gradient(circle at 85% 85%, rgba(27, 166, 114, 0.12), transparent 42%),
+    linear-gradient(135deg, #0f172a 0%, #111827 52%, #1e293b 100%);
+  color: #f8fafc;
+}
+
+.adminLoginBackdrop {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+.adminLoginContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adminTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.adminBackLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.adminBackLink:hover {
+  color: #fc8019;
+}
+
+.adminSecurityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fdba74;
+  background: rgba(252, 128, 25, 0.14);
+  border: 1px solid rgba(252, 128, 25, 0.35);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.adminLoginCard {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 16px;
+  padding: 32px 30px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.adminBrandHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.adminBrandIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fc8019 0%, #ea580c 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(252, 128, 25, 0.35);
+}
+
+.adminBrandEyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #fc8019;
+  margin-bottom: 2px;
+}
+
+.adminBrandTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.adminSubtitle {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.adminErrorAlert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(239, 68, 68, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.adminErrorIcon {
+  font-size: 17px;
+  color: #f87171;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.adminLoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adminFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.adminFormLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.adminInputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.adminInputIcon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.adminInputWrap input {
+  width: 100%;
+  padding: 12px 42px 12px 42px;
+  font-size: 14px;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 10px;
+  color: #f8fafc;
+}
+
+.adminInputWrap input::placeholder {
+  color: #64748b;
+}
+
+.adminInputWrap input:focus {
+  border-color: #fc8019;
+  box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.2);
+  background: #1e293b;
+}
+
+.adminPasswordToggle {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  color: #94a3b8;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.adminPasswordToggle:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.adminSubmitBtn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fc8019 0%, #ea580c 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 10px 24px rgba(252, 128, 25, 0.28);
+}
+
+.adminSubmitBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(252, 128, 25, 0.36);
+}
+
+.adminSubmitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.adminDemoBox {
+  margin-top: 22px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.72);
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.adminDemoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.adminDemoLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #94a3b8;
+}
+
+.adminDemoCreds {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #e2e8f0;
+  word-break: break-all;
+}
+
+.adminFillBtn {
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: rgba(252, 128, 25, 0.16);
+  color: #fdba74;
+  border: 1px solid rgba(252, 128, 25, 0.35);
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.adminFillBtn:hover {
+  background: #fc8019;
+  color: #ffffff;
+}
+
+.adminFooterNote {
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.adminCustomerLink {
+  color: #fdba74;
+  font-weight: 600;
+}
+
+.adminCustomerLink:hover {
+  text-decoration: underline;
+}
+
+/* Laptop L (1440px+) */
+@media (min-width: 1400px) {
+  .adminLoginContainer {
+    max-width: 470px;
+  }
+  .adminLoginCard {
+    padding: 36px 34px;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .adminLoginPage {
+    padding: 24px 18px;
+  }
+  .adminLoginContainer {
+    max-width: 430px;
+  }
+}
+
+/* Mobile L (425px) */
+@media (max-width: 480px) {
+  .adminLoginPage {
+    padding: 18px 14px;
+    align-items: flex-start;
+    padding-top: 28px;
+  }
+  .adminLoginCard {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+  .adminBrandIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+  .adminBrandTitle {
+    font-size: 21px;
+  }
+  .adminSubtitle {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .adminInputWrap input {
+    font-size: 15px;
+    padding: 11px 38px 11px 38px;
+  }
+  .adminDemoBox {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .adminFillBtn {
+    width: 100%;
+    padding: 9px 12px;
+  }
+}
+
+/* Mobile M (375px) & Mobile S (320px) */
+@media (max-width: 375px) {
+  .adminLoginPage {
+    padding: 14px 10px;
+    padding-top: 20px;
+  }
+  .adminTopBar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .adminBackLink {
+    font-size: 12.5px;
+  }
+  .adminSecurityBadge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .adminLoginCard {
+    padding: 18px 14px;
+  }
+  .adminBrandHeader {
+    gap: 10px;
+  }
+  .adminBrandIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  .adminBrandEyebrow {
+    font-size: 10px;
+  }
+  .adminBrandTitle {
+    font-size: 19px;
+  }
+  .adminSubmitBtn {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .adminDemoCreds {
+    font-size: 11.5px;
+  }
+}

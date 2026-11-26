@@ -1,0 +1,155 @@
+.adminControlBar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  border-bottom: 2px solid #fc8019;
+  position: sticky;
+  top: 0;
+  z-index: 1005;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.adminControlBar.minimized {
+  opacity: 0.95;
+}
+
+.adminBarContainer {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.adminBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.adminShieldBadge {
+  background: linear-gradient(135deg, #fc8019 0%, #ea580c 100%);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.35);
+}
+
+.adminBarGreeting {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.adminBarGreeting strong {
+  color: #ffffff;
+}
+
+.adminBarActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.adminQuickBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adminQuickBtn:hover {
+  background: #fc8019;
+  border-color: #fc8019;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.adminDashboardPill {
+  background: #fc8019;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.35);
+  transition: all 0.2s ease;
+}
+
+.adminDashboardPill:hover {
+  background: #e06d0e;
+  transform: translateY(-1px);
+}
+
+.adminBarToggleBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #94a3b8;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adminBarToggleBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+  .adminBarGreeting {
+    display: none;
+  }
+  .adminBarContainer {
+    padding: 6px 12px;
+  }
+  .adminQuickBtn span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adminBarActions {
+    width: 100%;
+    order: 3;
+    gap: 6px;
+  }
+  .adminQuickBtn {
+    flex: 1;
+    justify-content: center;
+    padding: 5px 8px;
+    font-size: 11.5px;
+  }
+  .adminDashboardPill {
+    flex: 1 1 100%;
+    justify-content: center;
+    padding: 6px;
+    font-size: 12px;
+  }
+}

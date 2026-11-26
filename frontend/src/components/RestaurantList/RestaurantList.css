@@ -1,0 +1,318 @@
+.restaurantList {
+  max-width: 1200px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listHeader h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.restaurantCount {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: block;
+  margin-top: 2px;
+}
+
+.adminAddRestaurantBtn {
+  background: linear-gradient(135deg, #fc8019 0%, #ea580c 100%);
+  color: #ffffff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(252, 128, 25, 0.35);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adminAddRestaurantBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(252, 128, 25, 0.45);
+}
+
+.controlsContainer {
+  position: sticky;
+  top: 58px;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+  background: var(--bg-main);
+  padding: 12px 0 14px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.25s ease;
+}
+
+.controlsContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-color);
+  opacity: 0.6;
+}
+
+.searchWrapper {
+  position: relative;
+  max-width: 500px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.clearSearchBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.filterSection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sortSelect {
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+}
+
+.sortSelect.active {
+  border-color: var(--primary);
+  background: rgba(252, 128, 25, 0.08);
+  color: var(--primary);
+}
+
+.filterBtn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.filterBtn:hover {
+  border-color: var(--text-muted);
+  background: var(--bg-surface);
+}
+
+.filterBtn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 3px 10px rgba(252, 128, 25, 0.3);
+}
+
+.selectedCategoryChip {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(252, 128, 25, 0.35) !important;
+}
+
+.selectedCategoryChip:hover {
+  background: var(--primary-hover) !important;
+  transform: translateY(-1px);
+}
+
+.vegIconMini {
+  font-size: 10px;
+}
+
+.resetFiltersBtn {
+  background: transparent;
+  border: 1.5px solid #ef4444;
+  color: #ef4444;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition);
+}
+
+.resetFiltersBtn:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.restaurantGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(265px, 100%), 1fr));
+  gap: 24px;
+}
+
+.noResultsContainer {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px dashed var(--border-color);
+}
+
+.noResultsContainer h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.noResultsContainer p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.resetBigBtn {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.resetBigBtn:hover {
+  background: var(--primary-hover);
+}
+
+/* Laptop L (1440px+) */
+@media (min-width: 1400px) {
+  .restaurantList {
+    max-width: 1320px;
+  }
+  .restaurantGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+}
+
+/* Laptop (1024px) */
+@media (max-width: 1180px) {
+  .restaurantGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 860px) {
+  .restaurantList {
+    margin: 24px auto 48px;
+    padding: 0 16px;
+  }
+  .listHeader h2 {
+    font-size: 20px;
+  }
+  .searchWrapper {
+    max-width: 100%;
+  }
+  .restaurantGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Mobile L (425px) */
+@media (max-width: 540px) {
+  .restaurantList {
+    margin: 18px auto 40px;
+    padding: 0 12px;
+  }
+  .listHeader h2 {
+    font-size: 18px;
+  }
+  .restaurantCount {
+    font-size: 12.5px;
+  }
+  .controlsContainer {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .filterSection {
+    gap: 8px;
+  }
+  .sortSelect,
+  .filterBtn,
+  .resetFiltersBtn {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  .restaurantGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Mobile M (375px) & Mobile S (320px) */
+@media (max-width: 360px) {
+  .restaurantList {
+    padding: 0 10px;
+  }
+  .listHeader h2 {
+    font-size: 16.5px;
+  }
+  .searchInput {
+    padding: 10px 32px 10px 12px;
+    font-size: 13px;
+  }
+  .sortSelect,
+  .filterBtn,
+  .resetFiltersBtn {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+}

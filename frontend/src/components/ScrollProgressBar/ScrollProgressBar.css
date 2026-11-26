@@ -1,0 +1,33 @@
+.globalScrollProgressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background: rgba(0, 0, 0, 0.04);
+  z-index: 999999;
+  pointer-events: none;
+}
+
+.globalScrollProgressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #fc8019 0%, #ff5252 50%, #1ba672 100%);
+  position: relative;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 10px rgba(252, 128, 25, 0.6);
+  border-radius: 0 2px 2px 0;
+}
+
+.globalScrollProgressBarGlow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  filter: blur(2.5px);
+  box-shadow: 0 0 12px 3px rgba(255, 107, 0, 0.9);
+  opacity: 0.95;
+}

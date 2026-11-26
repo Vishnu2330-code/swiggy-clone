@@ -1,0 +1,169 @@
+.light {
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+.dark {
+  background: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* FLOATING BOTTOM CART BAR */
+.floatingBottomCartBar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 760px;
+  background: #60b244;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 30px rgba(96, 178, 68, 0.45);
+  z-index: 9998;
+  animation: slideUpCart 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floatingBottomCartBar:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 16px 36px rgba(96, 178, 68, 0.55);
+}
+
+@keyframes slideUpCart {
+  from {
+    transform: translate(-50%, 60px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.cartBarInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.cartBarCount {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cartBarDivider {
+  opacity: 0.6;
+}
+
+.cartBarTotal {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.cartBarAction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.cartBarAction:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cartBarIcon {
+  font-size: 18px;
+}
+
+/* NAVBAR ACTIVE CART ANIMATION */
+.activeCartNav {
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Floating Cart Bar: Tablet, Mobile L, Mobile M, Mobile S */
+@media (max-width: 768px) {
+  .floatingBottomCartBar {
+    bottom: 14px;
+    width: calc(100% - 24px);
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .floatingBottomCartBar {
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+  .cartBarInfo {
+    gap: 8px;
+    font-size: 13px;
+  }
+  .cartBarCount {
+    font-size: 12px;
+  }
+  .cartBarTotal {
+    font-size: 15px;
+  }
+  .cartBarAction {
+    padding: 7px 12px;
+    font-size: 12.5px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .floatingBottomCartBar {
+    width: calc(100% - 16px);
+    padding: 9px 11px;
+  }
+  .cartBarInfo {
+    gap: 6px;
+  }
+  .cartBarCount {
+    font-size: 11px;
+  }
+  .cartBarTotal {
+    font-size: 13.5px;
+  }
+  .cartBarAction {
+    padding: 6px 10px;
+    font-size: 11.5px;
+  }
+  .cartBarIcon {
+    font-size: 15px;
+  }
+}
